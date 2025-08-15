@@ -4,7 +4,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import pic from "../asset/img/Avatar.png";
-
+import { testimonialsList } from "../data/Testimonials";
 export default function Testimonials() {
   const [testimonials, setTestimonials] = useState([]);
 
@@ -45,7 +45,7 @@ export default function Testimonials() {
     1024: { slidesPerView: 3, spaceBetween: 30 },
   }}
 >
-          {testimonials.map((item, index) => (
+          {testimonialsList.map((item, index) => (
             <SwiperSlide key={index}>
               <div
                 className="group box__ h-[300px] bg-white border border-solid border-gray-300 rounded-xl p-6 flex flex-col justify-between transition-all duration-500 w-full mx-auto hover:border-indigo-600 hover:shadow-sm"
