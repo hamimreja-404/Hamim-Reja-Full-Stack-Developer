@@ -6,16 +6,16 @@ import "swiper/css/pagination";
 import pic from "../asset/img/Avatar.png";
 import { testimonialsList } from "../data/Testimonials";
 export default function Testimonials() {
-  const [testimonials, setTestimonials] = useState([]);
+  // const [testimonials, setTestimonials] = useState([]);
 
-  useEffect(() => {
-    fetch("http://localhost:5000/data")
-      .then((res) => res.json())
-      .then((data) => {
-        setTestimonials(data);
-      })
-      .catch((err) => console.error("Error fetching testimonials:", err));
-  }, []);
+  // useEffect(() => {
+  //   fetch("http://localhost:5000/data")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setTestimonials(data);
+  //     })
+  //     .catch((err) => console.error("Error fetching testimonials:", err));
+  // }, []);
 
   return (
     <>
