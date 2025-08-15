@@ -100,7 +100,7 @@ export default function Testimonials() {
           ))}
         </Swiper>
 
-        <div className="flex justify-center gap-2 cursor-pointer">
+        {/* <div className="flex justify-center gap-2 cursor-pointer">
           <p
             className="text-sm font-medium work__button"
             onClick={() => (window.location.href = "/review")}
@@ -108,7 +108,7 @@ export default function Testimonials() {
             Share Your Experience{" "}
             <i className="bx bx-right-arrow work__icon"></i>
           </p>
-        </div>
+        </div> */}
       </div>
     </section> )
     
