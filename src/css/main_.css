@@ -94,7 +94,9 @@
   padding: 0;
   margin: 0;
 }
-
+html, body {
+  overflow-x: hidden;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -1162,73 +1164,6 @@ video {
 
 
 
-.pricing__container {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.pricing__cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
-
-.pricing__card {
-  background-color: var(--container-color);
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  width: 300px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.pricing__card:hover {
-  transform: translateY(-10px);
-}
-
-.pricing__title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--title-color);
-  margin-bottom: 0.5rem;
-}
-
-.pricing__price {
-  font-size: 1.5rem;
-  color: #000;
-  font-weight: var(--font-medium);
-  margin-bottom: 0.25rem;
-}
-
-.pricing__list {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 1.5rem;
-}
-
-.pricing__list li {
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
-  color: var(--text-color-light);
-}
-
-.pricing__button {
-  display: inline-block;
-  padding: 0.6rem 1.5rem;
-  background-color: var(--first-color);
-  color: var(--body-color);
-  border-radius: 0.5rem;
-  font-weight: 500;
-  transition: background 0.3s ease;
-}
-
-.pricing__button:hover {
-  background-color: var(--first-color-alt);
-}
-
 .services__grid {
   display: flex;
   justify-content: center;
@@ -1580,3 +1515,123 @@ video {
   .ICON_{
     width: 20px;
   }
+
+
+
+
+  /* Navbar bottom always centered with fixed icon size */
+/* .nav__bottom {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: max-content;
+  z-index: 9999;
+}
+
+.ICON_Navbar {
+  width: 25px;
+  height: 25px;
+} */
+
+/* Ensure nav stays same size across devices */
+@media screen and (max-width: 480px) {
+  .ICON_Navbar {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+
+.pricing__container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap; /* allow wrapping */
+}
+
+.pricing__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.pricing__card {
+  background-color: var(--container-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  max-width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+}
+
+.pricing__card:hover {
+  transform: translateY(-10px);
+}
+
+.pricing__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--title-color);
+  margin-bottom: 0.5rem;
+}
+
+.pricing__price {
+  font-size: 1.5rem;
+  color: #000;
+  font-weight: var(--font-medium);
+  margin-bottom: 0.25rem;
+}
+
+.pricing__list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.pricing__list li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--text-color-light);
+}
+
+.pricing__button {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background-color: var(--first-color);
+  color: var(--body-color);
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+/* 📱 Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .pricing__cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing__card {
+    width: 90%; /* fills most of screen without overflow */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pricing__card {
+    width: 100%;
+  }
+}

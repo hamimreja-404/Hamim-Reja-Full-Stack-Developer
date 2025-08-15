@@ -19,7 +19,7 @@ export default function Testimonials() {
 
   return (
     <>
-    ( <section className="py-24">
+    ( <section >
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16 mt-16">
           <span className="section__subtitle" data-aos="fade-up">
@@ -30,25 +30,25 @@ export default function Testimonials() {
           </h3>
         </div>
 
-        <Swiper
-          modules={[Autoplay, Pagination]}
-          className="mySwiper w-7xl flex justify-center"
-          slidesPerView={1}
-          spaceBetween={32}
-          loop
-          centeredSlides
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 2500, disableOnInteraction: false }}
-          breakpoints={{
-            640: { slidesPerView: 1, spaceBetween: 32 },
-            768: { slidesPerView: 2, spaceBetween: 32 },
-            1024: { slidesPerView: 3, spaceBetween: 32 },
-          }}
-        >
+<Swiper
+  modules={[Autoplay, Pagination]}
+  className="mySwiper w-full max-w-7xl mx-auto px-2 sm:px-4 flex justify-center"
+  slidesPerView={1}
+  spaceBetween={16}
+  loop
+  centeredSlides
+  pagination={{ clickable: true }}
+  autoplay={{ delay: 2500, disableOnInteraction: false }}
+  breakpoints={{
+    640: { slidesPerView: 1, spaceBetween: 20 },
+    768: { slidesPerView: 2, spaceBetween: 24 },
+    1024: { slidesPerView: 3, spaceBetween: 30 },
+  }}
+>
           {testimonials.map((item, index) => (
             <SwiperSlide key={index}>
               <div
-                className="group box__ h-[250px] bg-white border border-solid border-gray-300 rounded-xl p-6 flex flex-col justify-between transition-all duration-500 w-full mx-auto hover:border-indigo-600 hover:shadow-sm"
+                className="group box__ h-[300px] bg-white border border-solid border-gray-300 rounded-xl p-6 flex flex-col justify-between transition-all duration-500 w-full mx-auto hover:border-indigo-600 hover:shadow-sm"
                 data-aos="fade-up"
               >
                 {/* Star + Rating */}
