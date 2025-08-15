@@ -1,5 +1,7 @@
 import React from 'react'
-
+import linkedin from '/public/linkedin.png'
+import instagram from '/public/instagram.png'
+import github from '/public/github.png'
 export default function Footer() {
   return (
     <>
@@ -28,18 +30,18 @@ export default function Footer() {
 
                 <li class="footer__social-item">
                     <a href="https://github.com/hamimreja-404" target="_blank" class="footer__social-link">
-                        <i class='bx bxl-github footer__social-icon'></i>
+                        <img className="bx ICON_" src={github} alt="" />
                     </a>
                 </li>
                 <li class="footer__social-item">
                     <a href="https://www.linkedin.com/in/hamim-reja-a2ba42279" target="_blank"
                         class="footer__social-link">
-                        <i class='bx bxl-linkedin footer__social-icon'></i>
+                        <img className="bx ICON_" src={linkedin} alt="" />
                     </a>
                 </li>
                 <li class="footer__social-item">
                     <a href="https://www.instagram.com/hamim__reja/" target="_blank" class="footer__social-link">
-                        <i class='bx bxl-instagram footer__social-icon'></i>
+                        <img className="bx ICON_" src={instagram} alt="" />
                     </a>
                 </li>
             </ul>

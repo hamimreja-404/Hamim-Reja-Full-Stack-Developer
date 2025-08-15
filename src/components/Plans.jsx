@@ -1,5 +1,5 @@
 import React from "react";
-import { websitePackages } from "../data/services";
+import { websitePackages } from "../data/services.js";
 import { CheckCircleIcon } from "@heroicons/react/24/outline";
 
 export default function Plans() {

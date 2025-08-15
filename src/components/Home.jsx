@@ -1,5 +1,9 @@
 import React from "react";
 import pic from '../asset/img/Profile.png'
+import scroll from '/public/mouse-scroll.png'
+import linkedin from '/public/linkedin.png'
+import instagram from '/public/instagram.png'
+import github from '/public/github.png'
 export default function Home() {
   return (
     <>
@@ -11,21 +15,21 @@ export default function Home() {
               className="home__social-link"
               target="_blank"
             >
-              <i className="bx bxl-linkedin"></i>
+             <img className="bx ICON_" src={linkedin} alt="" />
             </a>
             <a
               href="https://github.com/hamimreja-404"
               className="home__social-link"
               target="_blank"
             >
-              <i className="bx bxl-github"></i>
+              <img className="bx ICON_" src={github} alt="" />
             </a>
             <a
               href="https://www.instagram.com/hamim__reja/"
               className="home__social-link"
               target="_blank"
             >
-              <i className="bx bxl-instagram"></i>
+              <img className="bx ICON_" src={instagram} alt="" />
             </a>
           </div>
 
@@ -56,7 +60,7 @@ export default function Home() {
           </div>
 
           <a href="#about" className="home__scroll ">
-            <i className="bx bx-mouse home__scroll-icon"></i>
+             <img className="bx ICON_Navbar" src={scroll} alt="" />
             <span className="home__scroll-name">Scroll Down</span>
           </a>
         </div>

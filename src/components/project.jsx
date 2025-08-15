@@ -2,7 +2,7 @@ import React from "react";
 import laptop from "../asset/img/laptop.png";
 import mobile from "../asset/img/Mobile.png";
 import { ProjectList } from "../data/Project";
-
+import arrow from '/public/angle-circle-right.png'
 export default function Project() {
   return (
     <>
@@ -29,7 +29,7 @@ export default function Project() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Demo <i className="bx bx-right-arrow work__icon"></i>
+            Demo <img className="bx ICON_" src={arrow} alt="" />
           </a>
         </div>
       ))}

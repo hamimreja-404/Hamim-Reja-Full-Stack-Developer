@@ -1,7 +1,9 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast, Flip } from "react-toastify";
-
+import linkedin from '/public/linkedin.png'
+import instagram from '/public/instagram.png'
+import github from '/public/github.png'
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");

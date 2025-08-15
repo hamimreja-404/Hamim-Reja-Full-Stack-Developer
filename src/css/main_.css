@@ -808,7 +808,7 @@ body {
 }
 .footer__social-link:hover {
   transition: 0.25s;
-  background-color: var(--icon);
+  background-color: #9f92de;
   color: var(--body-color);
 }
 .footer__copy {
@@ -1572,4 +1572,11 @@ video {
   }
   .line__{
     color: var(--text-color);
+  }
+  .ICON_Navbar{
+    width: 25px;
+
+  }
+  .ICON_{
+    width: 20px;
   }

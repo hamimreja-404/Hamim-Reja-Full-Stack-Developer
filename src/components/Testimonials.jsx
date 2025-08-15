@@ -19,7 +19,7 @@ export default function Testimonials() {
 
   return (
     <>
-    {testimonials.length > 0 &&( <section className="py-24">
+    ( <section className="py-24">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16 mt-16">
           <span className="section__subtitle" data-aos="fade-up">
@@ -110,7 +110,7 @@ export default function Testimonials() {
           </p>
         </div>
       </div>
-    </section> )}
+    </section> )
     
     </>
   );

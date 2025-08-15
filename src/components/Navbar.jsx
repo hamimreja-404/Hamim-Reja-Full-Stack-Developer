@@ -1,6 +1,11 @@
 
 import React, { useEffect, useState } from "react";
+import home from '/public/home.png'
+import about from '/public/user.png'
 
+import projects from '/public/code-editing.png'
+import services from '/public/it-alt.png'
+import contact from '/public/phone-plus.png'
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
 
@@ -17,7 +22,7 @@ export default function Navbar() {
       },
       {
         root: null,
-        rootMargin: "0px",
+        rootMargin:  "0px",
         threshold: 0.6, // 60% visible = active
       }
     );
@@ -29,7 +34,7 @@ export default function Navbar() {
     return () => {
       sections.forEach((section) => observer.unobserve(section));
     };
-  }, []);
+  }, [document.querySelectorAll("section[id]").length]);
 
   return (
     <header className="header" id="header">
@@ -38,37 +43,44 @@ export default function Navbar() {
           href="#home"
           className={`nav__bottom-link ${activeSection === "home" ? "active-link" : ""}`}
         >
-          <i className="bx bx-home-alt-2"></i>
+
+          <img className="bx ICON_Navbar" src={home} alt="" />
         </a>
         <a
           href="#about"
           className={`nav__bottom-link ${activeSection === "about" ? "active-link" : ""}`}
         >
-          <i className="bx bx-user"></i>
+          <img className="bx ICON_Navbar" src={about} alt="" />
         </a>
-        <a
+        {/* <a
           href="#skills"
           className={`nav__bottom-link ${activeSection === "skills" ? "active-link" : ""}`}
         >
           <i className="bx bx-code-alt"></i>
-        </a>
+        </a> */}
         <a
           href="#services"
           className={`nav__bottom-link ${activeSection === "services" ? "active-link" : ""}`}
         >
-          <i className="bx bx-cog"></i>
+          <img className="bx ICON_Navbar" src={services} alt="" />
         </a>
+        {/* <a
+          href="#pricing"
+          className={`nav__bottom-link ${activeSection === "pricing" ? "active-link" : ""}`}
+        >
+          <img className="bx ICON_Navbar" src={price} alt="" />
+        </a> */}
         <a
           href="#work"
           className={`nav__bottom-link ${activeSection === "work" ? "active-link" : ""}`}
         >
-          <i className="bx bx-briefcase"></i>
+          <img className="bx ICON_Navbar" src={projects} alt="" />
         </a>
         <a
           href="#contact"
           className={`nav__bottom-link ${activeSection === "contact" ? "active-link" : ""}`}
         >
-          <i className="bx bx-envelope"></i>
+          <img className="bx ICON_Navbar" src={contact} alt="" />
         </a>
       </div>
     </header>
